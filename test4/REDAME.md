@@ -7,7 +7,7 @@
 ```sql
 select * from employees where employee_id=11;
 ```
-[](./1.png)
+![](./1.png)
 
 2.递归查询某个员工及其所有下属，子下属员工。
 ```sql
