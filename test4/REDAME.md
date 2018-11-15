@@ -16,6 +16,7 @@ from employees a,employees b
 where a.EMPLOYEE_ID=b.MANAGER_ID;
 ```
 ![](./2.png)
+
 3.查询订单表，并且包括订单的订单应收货款:Trade_Receivable= sum(订单详单表.ProductNum*订单详单表.ProductPrice)- Discount。
 ```sql
 select a.*,(select sum(b.product_num*b.product_price)
