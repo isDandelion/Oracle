@@ -27,6 +27,7 @@ from orders a,order_details c
 where a.order_id=c.order_id;
 ```
 ![](./3.png)
+
 4.查询订单详表，要求显示订单的客户名称和客户电话，产品类型用汉字描述。
 ```sql
 select a.customer_name,a.customer_tel,c.product_type as "产品名称"
@@ -42,6 +43,7 @@ on a.order_id=b.order_id
 where b.order_id is null
 ```
 ![](./5.png)
+
 6.查询部门表，同时显示部门的负责人姓名。
 ```sql
 select departments.*,employees.name as "负责人"
@@ -49,6 +51,7 @@ from departments,employees
 where departments.department_id=employees.department_id
 ```
 ![](./6.png)
+
  7.查询部门表，统计每个部门的销售总金额。
 ```sql
   select a.department_name,(select sum(c.Trade_Receivable)from orders c  where c.employee_id=d.employee_id group by c.employee_id)as "销售总额"
