@@ -35,6 +35,7 @@ from orders a,order_details b,products c
 where a.order_id=b.order_id and b.product_name=c.product_name;
 ```
 ![](./4.png)
+
 5.查询出所有空订单，即没有订单详单的订单。
 ```sql
 select a.*
